@@ -3,12 +3,20 @@ from collections import deque
 # deque.append(x) -> 데크의 오른쪽에 x를 추가함
 # deque.appendleft(x) -> 데크의 왼쪽에 x를 추가함
 
-# stack을 활용할 때는 끝에 넣었다 붙이는 것이라 list를 사용해도 무관한데,
-# que를 활용할때는 맨 앞쪽에 넣고 꺼낼때는 deque를 활용하는 것이 비용이 저렴하다
+# stack을 활용할 때는 끝에 넣었다 붙이는 것이라 list를 사용해도 무관하지만,
+# que를 활용할 때는 맨 앞쪽에 넣고 꺼낼 때는 deque를 활용하는 것이 비용이 저렴하다
 
 
 def test_problem_queue(num):
     deq = deque([ i for i in range(1, num + 1)])  # -> 1부터 num까지 숫자가 데크화 됨
+
+    # [ i for i in range(1, num + 1)] == 리스트
+    # 위의 식을 '리스트 컴프리헨션' 이라고 부르며 for 루프를 사용하여 리스트를 생성하는 것을 뜻함
+    # 일반적인  result = []
+    #         for i in range(num):     ->  result = [ i * 2 for i in range(num)] == 리스트 컴프리헨션
+    #             result.append(i*2)
+
+
     while len(deq) > 1:    # 데크가 1개가 남을때 까지
         deq.popleft()  # 왼쪽에서 꺼내 버려
         deq.append(deq.popleft()) # 버리고 난 뒤 왼쪽에 있는 것은 다시 붙여(맨마지막에-deque이므로 )
