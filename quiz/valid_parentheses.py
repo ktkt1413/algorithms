@@ -13,11 +13,11 @@ def is_valid_parenthesis(s):
         else:
             if not stack:
                 return False
-            top = stack.pop()
+            top = stack.pop()  # stack.pop() -> 자체가 이미 스택에서 가장 윗 부분의 노드를 꺼냄 -> top에 할당
             if pair[char] != top:
                 return False
 
-    return not stack
+    return not stack  # stack이 비어있으면 true, 그렇지 않으면 false 를 반환한다
 
 #test코드
 assert is_valid_parenthesis("()")
