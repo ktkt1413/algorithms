@@ -3,7 +3,7 @@ class Node:
         self.val = val
         self.next = next
 
-class Queue:
+class Queues:
     def __init__(self):
         self.front = None  # 일반적으로 front는 큐에서 사용하는 용어이고, top는 스택에서 사용한는 용어이다
 

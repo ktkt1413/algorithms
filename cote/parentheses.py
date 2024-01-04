@@ -1,7 +1,7 @@
 # 백준 괄호 문제
 
 T = int(input())  # 입력받은 값은 string 이므로 int 형으로 변환 해줌
-
+                  #
 for i in range(T):
     stack = []
     str = input()  # "(" , ")" string 형태 그대로 사용함

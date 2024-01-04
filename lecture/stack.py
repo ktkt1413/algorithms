@@ -3,7 +3,7 @@ class Node:
         self.item = item  # 현재 노드가 저장하는 데이터
         self.next = next  # 다음 노드를 가리키는 링크 , prev(previous) 는 이전 노드를 가리키는 링크이다
 
-class Stack:
+class Stacks:
      def __init__(self):
          self.top = None     # self.top에 None 값을 할당한다
 

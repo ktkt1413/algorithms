@@ -8,7 +8,7 @@ def checkPalindrome( s, l, r, palindrome_sub, palindrome_len):
 
     return palindrome_len, palindrome_sub
 
-class Solution:
+class Palindrome:
     def logestPalindrome(self, s: str) -> str:  # s는 str, ->str 은 반환 값도 str
         palindrome_len = 0
         palindrome_sub = ' '
