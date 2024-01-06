@@ -1,3 +1,9 @@
+# 스택 = LIFO(Last In, First Out) = 후입선출
+# pop() 메서드 사용하여 스택을 구현할수 있음
+
+
+
+
 class Node:
     def __init__(self, item, next):
         self.item = item  # 현재 노드가 저장하는 데이터

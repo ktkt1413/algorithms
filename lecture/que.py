@@ -1,3 +1,9 @@
+# 큐 = FIFO = 선입선
+# collections 모듈에서 deque 클래스에서 사용할수있음. deque는 양쪽 끝에서 빠르게 삽입 삭제가 가능한 자료 구조
+# from collections import deque
+
+
+
 class Node:
     def __init__(self, val, next=None):    # next=None을 하지 않으면 next에 반드시 매개변수를 지정해줘야함
         self.val = val
