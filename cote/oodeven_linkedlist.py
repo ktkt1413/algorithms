@@ -13,20 +13,21 @@ class ListNode:
         self.val = val
         self.next = next
 
-def oddEvenList(head: Optional[ListNode]) -> Optional[ListNode]:
-    if head is None:
-        return None
+class Solution:
+    def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head is None:
+            return None
 
-    odd = odd_head = head
-    even = even_head = head.next
+        odd = odd_head = head
+        even = even_head = head.next
 
-    while even and even.next:
-        odd.next, even.next = odd.next.next, even.next.next
-        odd, even = odd.next, even.next
-        #  odd는 현재 가리키는 노드 -> 현재 가리키는 노드는 'odd.next.next' 이므로
-        #  변경사항을 업데이트 해줌
+        while even and even.next:
+            odd.next, even.next = odd.next.next, even.next.next
+            odd, even = odd.next, even.next
+            #  odd는 현재 가리키는 노드 -> 현재 가리키는 노드는 'odd.next.next' 이므로
+            #  변경사항을 업데이트 해줌
 
-    odd.next = even_head
+        odd.next = even_head
 
-    return odd_head
+        return odd_head
 
