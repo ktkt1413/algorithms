@@ -15,7 +15,7 @@ class Solution:
         while curr:
             next = curr.next
             curr.next = prev
-            prev = curr트
+            prev = curr
             curr = next
         return prev
 
