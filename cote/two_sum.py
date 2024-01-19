@@ -25,7 +25,7 @@ class Solutions2:
     def binarySearch(self, numbers: List[int], target: int)-> List[int]:
         for i in range(len(numbers)):
 
-            l, r = i + 1, len(numbers) -1   #  'l = i + 1' 이진 탐색 시 l 값의 초기값을 1로 설정
+            l, r = i , len(numbers) -1
             tmp = target - numbers[i]
 
             # 이진 탐색 시작
